@@ -24,7 +24,7 @@ func main() {
 	Recipe1.name = "BBQ Pulled Chicken"
 	Recipe1.prepTime = 25
 	Recipe1.cookTime = 5
-	Recipe1.recipeIngredient = "1 8-ounce can reduced-sodium tomato sauce"
+	Recipe1.recipeIngredient = "1 8-ounce can reduced-sodium tomato sauce, two"
 	Recipe1.recipeID = 1
 	Recipe1.recipeYield = 8
 
@@ -33,14 +33,14 @@ func main() {
 	Recipe2.name = "Steak Tacos with Pineapple"
 	Recipe2.prepTime = 45
 	Recipe2.cookTime = 45
-	Recipe2.recipeIngredient = "3 tablespoons soy sauce"
+	Recipe2.recipeIngredient = "3 tablespoons soy sauce, 3"
 	Recipe2.recipeID = 2
 	Recipe2.recipeYield = 4
 
 	Recipe3.name = "Simple Lemon Herb Chicken"
 	Recipe3.prepTime = 10
 	Recipe3.cookTime = 15
-	Recipe3.recipeIngredient = "2 skinless, boneless chicken breast halves"
+	Recipe3.recipeIngredient = "2 skinless, boneless chicken breast halves, test"
 	Recipe3.recipeID = 3
 	Recipe3.recipeYield = 2
 
@@ -91,6 +91,7 @@ func printRecipeOfTheDay(Recipe Recipes) {
 	fmt.Printf("The recipe of the day is : %s\n", Recipe.name)
 }
 
+//Returns total time by addings cookTime and prepTime
 func totalTime(Recipe Recipes) {
 	fmt.Printf("The total time for this recipe is %d\n", Recipe.cookTime+Recipe.prepTime)
 }
