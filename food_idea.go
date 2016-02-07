@@ -7,12 +7,12 @@ import (
 )
 
 type Recipes struct { //Struct for recipe information
-	name             string
-	prepTime         int
-	cookTime         int
-	recipeIngredient string
-	ID               int
-	Yield            int
+	name        string
+	prepTime    int
+	cookTime    int
+	Ingredients []string //this is now a slice that will accept multiple elements
+	ID          int
+	Yield       int
 }
 
 func main() {
@@ -24,7 +24,14 @@ func main() {
 	Recipe1.name = "BBQ Pulled Chicken"
 	Recipe1.prepTime = 25
 	Recipe1.cookTime = 5
-	Recipe1.recipeIngredient = "1 8-ounce can reduced-sodium tomato sauce, two"
+	Recipe1.Ingredients = append(
+		Recipe1.Ingredients,
+		"1 8-ounce can reduced-sodium tomato sauce",
+	)
+	Recipe1.Ingredients = append(
+		Recipe1.Ingredients,
+		"1/2 medium onion, grated ",
+	)
 	Recipe1.ID = 1
 	Recipe1.Yield = 8
 
@@ -33,14 +40,34 @@ func main() {
 	Recipe2.name = "Steak Tacos with Pineapple"
 	Recipe2.prepTime = 45
 	Recipe2.cookTime = 45
-	Recipe2.recipeIngredient = "3 tablespoons soy sauce, 3"
+	Recipe2.Ingredients = append(
+		Recipe1.Ingredients,
+		"1/2 medium onion, grated ",
+	)
+
 	Recipe2.ID = 2
 	Recipe2.Yield = 4
 
 	Recipe3.name = "Simple Lemon Herb Chicken"
 	Recipe3.prepTime = 10
 	Recipe3.cookTime = 15
-	Recipe3.recipeIngredient = "2 skinless, boneless chicken breast halves, 1 Lemon"
+	Recipe3.Ingredients = append(
+		Recipe3.Ingredients,
+		"2 skinless, boneless chicken breast halves",
+	)
+	Recipe3.Ingredients = append(
+		Recipe3.Ingredients,
+		"1 Lemon",
+	)
+	Recipe3.Ingredients = append(
+		Recipe3.Ingredients,
+		"Salt and Pepper to taste",
+	)
+	Recipe3.Ingredients = append(
+		Recipe3.Ingredients,
+		"1 tablespoon olive oil",
+	)
+
 	Recipe3.ID = 3
 	Recipe3.Yield = 2
 
@@ -48,7 +75,7 @@ func main() {
 	fmt.Printf(" Recipe name : %s\n", Recipe1.name)
 	fmt.Printf(" Recipe prepTime : %d\n", Recipe1.prepTime)
 	fmt.Printf(" Recipe cookTime: %d\n", Recipe1.cookTime)
-	fmt.Printf(" Recipe recipeIngredient : %s\n", Recipe1.recipeIngredient)
+	fmt.Printf(" Recipe Ingredient : %s\n", Recipe1.Ingredients)
 	fmt.Printf(" Recipe ID : %d\n", Recipe1.ID)
 
 	//call to printRecipe function below
