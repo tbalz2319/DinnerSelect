@@ -40,7 +40,7 @@ func main() {
 	Recipe3.name = "Simple Lemon Herb Chicken"
 	Recipe3.prepTime = 10
 	Recipe3.cookTime = 15
-	Recipe3.recipeIngredient = "2 skinless, boneless chicken breast halves, test"
+	Recipe3.recipeIngredient = "2 skinless, boneless chicken breast halves, 1 Lemon"
 	Recipe3.recipeID = 3
 	Recipe3.recipeYield = 2
 
@@ -56,6 +56,8 @@ func main() {
 	totalTime(Recipe1)
 	printRecipe(Recipe2)
 	totalTime(Recipe2)
+	printRecipe(Recipe3)
+	totalTime(Recipe3)
 
 	//choose random number for recipe
 	rand.Seed(time.Now().UTC().UnixNano())
@@ -71,6 +73,8 @@ func main() {
 		printRecipeOfTheDay(Recipe2)
 	} else if myrand == 3 {
 		fmt.Println(3)
+	} else if myrand == 4 {
+		fmt.Println(4)
 	}
 }
 
