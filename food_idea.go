@@ -42,9 +42,28 @@ func main() {
 	Recipe2.cookTime = 45
 	Recipe2.Ingredients = append(
 		Recipe2.Ingredients,
-		"1/2 medium onion (grated),",
+		"3 tablespoons soy sauce,",
 	)
-
+	Recipe2.Ingredients = append(
+		Recipe2.Ingredients,
+		"1 tablespoon finely grated garlic,",
+	)
+	Recipe2.Ingredients = append(
+		Recipe2.Ingredients,
+		"1 tablespoon finely grated peeled fresh ginger,",
+	)
+	Recipe2.Ingredients = append(
+		Recipe2.Ingredients,
+		"1 1/2 pounds skirt steak, cut into 5-inch lengths,",
+	)
+	Recipe2.Ingredients = append(
+		Recipe2.Ingredients,
+		"Salt",
+	)
+	Recipe2.Ingredients = append(
+		Recipe2.Ingredients,
+		"Pepper",
+	)
 	Recipe2.ID = 2
 	Recipe2.Yield = 4
 
@@ -107,6 +126,7 @@ func main() {
 		printRecipeOfTheDay(Recipe2)
 	} else if myrand == 3 {
 		fmt.Println(3)
+		printRecipeOfTheDay(Recipe3)
 	} else if myrand == 4 {
 		fmt.Println(4)
 	}
