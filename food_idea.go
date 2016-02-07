@@ -86,6 +86,11 @@ func printRecipe(Recipe Recipes) {
 	fmt.Printf("Recipe ID : %d\n", Recipe.ID)
 }
 
+//random number function
+func random(min, max int) int {
+	return rand.Intn(max-min) + min
+}
+
 func printRecipeOfTheDay(Recipe Recipes) {
 	fmt.Printf("The recipe of the day is : %s\n", Recipe.name)
 }
