@@ -30,7 +30,7 @@ func main() {
 	)
 	Recipe1.Ingredients = append(
 		Recipe1.Ingredients,
-		"1/2 medium onion, grated ",
+		"1/2 medium onion (grated),",
 	)
 	Recipe1.ID = 1
 	Recipe1.Yield = 8
@@ -41,8 +41,8 @@ func main() {
 	Recipe2.prepTime = 45
 	Recipe2.cookTime = 45
 	Recipe2.Ingredients = append(
-		Recipe1.Ingredients,
-		"1/2 medium onion, grated ",
+		Recipe2.Ingredients,
+		"1/2 medium onion (grated),",
 	)
 
 	Recipe2.ID = 2
@@ -53,15 +53,15 @@ func main() {
 	Recipe3.cookTime = 15
 	Recipe3.Ingredients = append(
 		Recipe3.Ingredients,
-		"2 skinless, boneless chicken breast halves",
+		"2 skinless boneless chicken breast halves,",
 	)
 	Recipe3.Ingredients = append(
 		Recipe3.Ingredients,
-		"1 Lemon",
+		"1 Lemon,",
 	)
 	Recipe3.Ingredients = append(
 		Recipe3.Ingredients,
-		"Salt and Pepper to taste",
+		"Salt and Pepper to taste,",
 	)
 	Recipe3.Ingredients = append(
 		Recipe3.Ingredients,
@@ -75,7 +75,7 @@ func main() {
 	fmt.Printf(" Recipe name : %s\n", Recipe1.name)
 	fmt.Printf(" Recipe prepTime : %d\n", Recipe1.prepTime)
 	fmt.Printf(" Recipe cookTime: %d\n", Recipe1.cookTime)
-	fmt.Printf(" Recipe Ingredient : %s\n", Recipe1.Ingredients)
+	fmt.Printf(" Recipe Ingredients : %s\n", Recipe1.Ingredients)
 	fmt.Printf(" Recipe ID : %d\n", Recipe1.ID)
 
 	//call to printRecipe function below
@@ -110,6 +110,7 @@ func printRecipe(Recipe Recipes) {
 	fmt.Printf("Recipe Name : %s\n", Recipe.name)
 	fmt.Printf("Prep Time : %d\n", Recipe.prepTime)
 	fmt.Printf("Cook Time : %d\n", Recipe.cookTime)
+	fmt.Printf("Ingredients : %s\n", Recipe.Ingredients)
 	fmt.Printf("Recipe ID : %d\n", Recipe.ID)
 }
 
