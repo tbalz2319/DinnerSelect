@@ -65,9 +65,16 @@ func main() {
 	)
 	Recipe3.Ingredients = append(
 		Recipe3.Ingredients,
-		"1 tablespoon olive oil",
+		"1 tablespoon olive oil,",
 	)
-
+	Recipe3.Ingredients = append(
+		Recipe3.Ingredients,
+		"2 sprigs fresh parsley (for garnish),",
+	)
+	Recipe3.Ingredients = append(
+		Recipe3.Ingredients,
+		"1 pinch dried oregano,",
+	)
 	Recipe3.ID = 3
 	Recipe3.Yield = 2
 
