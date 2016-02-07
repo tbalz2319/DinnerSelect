@@ -11,8 +11,8 @@ type Recipes struct { //Struct for recipe information
 	prepTime         int
 	cookTime         int
 	recipeIngredient string
-	recipeID         int
-	recipeYield      int
+	ID               int
+	Yield            int
 }
 
 func main() {
@@ -25,8 +25,8 @@ func main() {
 	Recipe1.prepTime = 25
 	Recipe1.cookTime = 5
 	Recipe1.recipeIngredient = "1 8-ounce can reduced-sodium tomato sauce, two"
-	Recipe1.recipeID = 1
-	Recipe1.recipeYield = 8
+	Recipe1.ID = 1
+	Recipe1.Yield = 8
 
 	/* Recipe 2 specifications */
 
@@ -34,22 +34,22 @@ func main() {
 	Recipe2.prepTime = 45
 	Recipe2.cookTime = 45
 	Recipe2.recipeIngredient = "3 tablespoons soy sauce, 3"
-	Recipe2.recipeID = 2
-	Recipe2.recipeYield = 4
+	Recipe2.ID = 2
+	Recipe2.Yield = 4
 
 	Recipe3.name = "Simple Lemon Herb Chicken"
 	Recipe3.prepTime = 10
 	Recipe3.cookTime = 15
 	Recipe3.recipeIngredient = "2 skinless, boneless chicken breast halves, 1 Lemon"
-	Recipe3.recipeID = 3
-	Recipe3.recipeYield = 2
+	Recipe3.ID = 3
+	Recipe3.Yield = 2
 
 	/* print 1 info */
 	fmt.Printf(" Recipe name : %s\n", Recipe1.name)
 	fmt.Printf(" Recipe prepTime : %d\n", Recipe1.prepTime)
 	fmt.Printf(" Recipe cookTime: %d\n", Recipe1.cookTime)
 	fmt.Printf(" Recipe recipeIngredient : %s\n", Recipe1.recipeIngredient)
-	fmt.Printf(" Recipe recipeID : %d\n", Recipe1.recipeID)
+	fmt.Printf(" Recipe ID : %d\n", Recipe1.ID)
 
 	//call to printRecipe function below
 	printRecipe(Recipe1)
@@ -83,12 +83,7 @@ func printRecipe(Recipe Recipes) {
 	fmt.Printf("Recipe Name : %s\n", Recipe.name)
 	fmt.Printf("Prep Time : %d\n", Recipe.prepTime)
 	fmt.Printf("Cook Time : %d\n", Recipe.cookTime)
-	fmt.Printf("Recipe recipeID : %d\n", Recipe.recipeID)
-}
-
-//random number function
-func random(min, max int) int {
-	return rand.Intn(max-min) + min
+	fmt.Printf("Recipe ID : %d\n", Recipe.ID)
 }
 
 func printRecipeOfTheDay(Recipe Recipes) {
