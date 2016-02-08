@@ -97,13 +97,6 @@ func main() {
 	recipe3.ID = 3
 	recipe3.Yield = 2
 
-	/* print 1 info */
-	fmt.Printf(" Recipe name : %s\n", recipe1.name)
-	fmt.Printf(" Recipe prepTime : %d\n", recipe1.prepTime)
-	fmt.Printf(" Recipe cookTime: %d\n", recipe1.cookTime)
-	fmt.Printf(" Recipe Ingredients : %s\n", recipe1.Ingredients)
-	fmt.Printf(" Recipe ID : %d\n", recipe1.ID)
-
 	//call to printRecipe function below
 	printRecipe(recipe1)
 	totalTime(recipe1)
@@ -146,6 +139,8 @@ func random(min, max int) int {
 	return rand.Intn(max-min) + min
 }
 
+//function to print the winner for recipe of the day to use
+//for either lunch or dinner
 func printRecipeOfTheDay(recipe Recipe) {
 	fmt.Printf("The recipe of the day is : %s\n", recipe.name)
 }
