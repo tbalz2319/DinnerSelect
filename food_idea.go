@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+//Struct for Recipe below
 type Recipe struct { //Struct for recipe information
 	name        string
 	prepTime    int
@@ -15,11 +16,58 @@ type Recipe struct { //Struct for recipe information
 	Yield       int
 }
 
+//function to print Recipe
+func printRecipe(recipe Recipe) {
+	fmt.Printf("Recipe Name : %s\n", recipe.name)
+	fmt.Printf("Prep Time : %d\n", recipe.prepTime)
+	fmt.Printf("Cook Time : %d\n", recipe.cookTime)
+	fmt.Printf("Ingredients : %s\n", recipe.Ingredients)
+	fmt.Printf("Recipe ID : %d\n", recipe.ID)
+}
+
+//Returns total time by addings cookTime and prepTime
+func totalTime(recipe Recipe) {
+	fmt.Printf("The total time for this recipe is %d\n", recipe.cookTime+recipe.prepTime)
+}
+
 func main() {
 	var recipe1 Recipe //Declare recipe1 of Type Recipe
 	var recipe2 Recipe
 	var recipe3 Recipe
 
+	//choose random number for recipe
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	i := r.Perm(5)
+	fmt.Printf("%v\n", i)
+	fmt.Printf("%d\n", i[0])
+
+	//assign slices of int from Perm to variables assigned days of the week
+	var monday = i[0]
+	var tuesday = i[1]
+	var wednesday = i[2]
+	var thursday = i[3]
+	var friday = i[4]
+
+	//testing printing of variables assigned to days
+	fmt.Printf("This is for the day Monday %d\n", monday)
+	fmt.Printf("%d\n", tuesday)
+	fmt.Printf("%d\n", wednesday)
+	fmt.Printf("%d\n", thursday)
+	fmt.Printf("%d\n", friday)
+
+	//logic for Mondays Recipe
+	if monday == 0 {
+		fmt.Println(0)
+		printRecipeOfTheDay(recipe1)
+	} else if monday == 1 {
+		fmt.Println(1)
+		printRecipeOfTheDay(recipe2)
+	} else if monday == 2 {
+		fmt.Println(2)
+		printRecipeOfTheDay(recipe3)
+	} else if monday == 3 {
+		fmt.Println(3)
+	}
 	/* recipe1 specifications */
 	recipe1.name = "BBQ Pulled Chicken"
 	recipe1.prepTime = 25
@@ -104,48 +152,10 @@ func main() {
 	totalTime(recipe2)
 	printRecipe(recipe3)
 	totalTime(recipe3)
-
-	//choose random number for recipe
-	rand.Seed(time.Now().UTC().UnixNano())
-	myrand := random(1, 6)
-	fmt.Println(myrand)
-
-	//logic for recipe to choose
-	if myrand == 1 {
-		fmt.Println(1)
-		printRecipeOfTheDay(recipe1)
-	} else if myrand == 2 {
-		fmt.Println(2)
-		printRecipeOfTheDay(recipe2)
-	} else if myrand == 3 {
-		fmt.Println(3)
-		printRecipeOfTheDay(recipe3)
-	} else if myrand == 4 {
-		fmt.Println(4)
-	}
-}
-
-//function to print Recipe
-func printRecipe(recipe Recipe) {
-	fmt.Printf("Recipe Name : %s\n", recipe.name)
-	fmt.Printf("Prep Time : %d\n", recipe.prepTime)
-	fmt.Printf("Cook Time : %d\n", recipe.cookTime)
-	fmt.Printf("Ingredients : %s\n", recipe.Ingredients)
-	fmt.Printf("Recipe ID : %d\n", recipe.ID)
-}
-
-//random number function
-func random(min, max int) int {
-	return rand.Intn(max-min) + min
 }
 
 //function to print the winner for recipe of the day to use
 //for either lunch or dinner
 func printRecipeOfTheDay(recipe Recipe) {
 	fmt.Printf("The recipe of the day is : %s\n", recipe.name)
-}
-
-//Returns total time by addings cookTime and prepTime
-func totalTime(recipe Recipe) {
-	fmt.Printf("The total time for this recipe is %d\n", recipe.cookTime+recipe.prepTime)
 }
