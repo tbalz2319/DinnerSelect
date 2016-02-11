@@ -16,30 +16,21 @@ type Recipe struct { //Struct for recipe information
 	Yield       int
 }
 
-//function to print Recipe
-func printRecipe(recipe Recipe) {
-	fmt.Printf("Recipe Name : %s\n", recipe.name)
-	fmt.Printf("Prep Time : %d\n", recipe.prepTime)
-	fmt.Printf("Cook Time : %d\n", recipe.cookTime)
-	fmt.Printf("Ingredients : %s\n", recipe.Ingredients)
-	fmt.Printf("Recipe ID : %d\n", recipe.ID)
-}
-
-//Returns total time by addings cookTime and prepTime
-func totalTime(recipe Recipe) {
-	fmt.Printf("The total time for this recipe is %d\n", recipe.cookTime+recipe.prepTime)
-}
-
+//main method
 func main() {
+	//5 variables below for 5 recipes for Monday-Friday
 	var recipe1 Recipe //Declare recipe1 of Type Recipe
 	var recipe2 Recipe
 	var recipe3 Recipe
+	var recipe4 Recipe
+	var recipe5 Recipe
 
 	//choose random number for recipe
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	i := r.Perm(5)
 	fmt.Printf("%v\n", i)
 	fmt.Printf("%d\n", i[0])
+	fmt.Printf("%d\n", i[1])
 
 	//assign slices of int from Perm to variables assigned days of the week
 	var monday = i[0]
@@ -50,24 +41,11 @@ func main() {
 
 	//testing printing of variables assigned to days
 	fmt.Printf("This is for the day Monday %d\n", monday)
-	fmt.Printf("%d\n", tuesday)
-	fmt.Printf("%d\n", wednesday)
-	fmt.Printf("%d\n", thursday)
-	fmt.Printf("%d\n", friday)
+	fmt.Printf("This is for the day Tuesday %d\n", tuesday)
+	fmt.Printf("This is for the day Wednesday %d\n", wednesday)
+	fmt.Printf("This is for the day Thursday %d\n", thursday)
+	fmt.Printf("This is for the day Friday %d\n", friday)
 
-	//logic for Mondays Recipe
-	if monday == 0 {
-		fmt.Println(0)
-		printRecipeOfTheDay(recipe1)
-	} else if monday == 1 {
-		fmt.Println(1)
-		printRecipeOfTheDay(recipe2)
-	} else if monday == 2 {
-		fmt.Println(2)
-		printRecipeOfTheDay(recipe3)
-	} else if monday == 3 {
-		fmt.Println(3)
-	}
 	/* recipe1 specifications */
 	recipe1.name = "BBQ Pulled Chicken"
 	recipe1.prepTime = 25
@@ -145,6 +123,44 @@ func main() {
 	recipe3.ID = 3
 	recipe3.Yield = 2
 
+	//recipe4 specifications
+	recipe4.name = "Easy Meatloaf"
+	recipe4.prepTime = 10
+	recipe4.cookTime = 60
+	recipe4.Ingredients = append(
+		recipe4.Ingredients,
+		"1 onion (chopped),",
+	)
+	recipe4.Ingredients = append(
+		recipe4.Ingredients,
+		"1 cup milk,",
+	)
+	recipe4.Ingredients = append(
+		recipe4.Ingredients,
+		"1 cup dried bread crumbs,",
+	)
+	recipe4.ID = 4
+	recipe4.Yield = 8
+
+	//recipe 5 specifications
+	recipe5.name = "Fast Salmon with a Ginger Glaze"
+	recipe5.prepTime = 5
+	recipe5.cookTime = 20
+	recipe5.Ingredients = append(
+		recipe5.Ingredients,
+		"salt to taste,",
+	)
+	recipe5.Ingredients = append(
+		recipe5.Ingredients,
+		"1/3 cup cold water,",
+	)
+	recipe5.Ingredients = append(
+		recipe5.Ingredients,
+		"1/4 cup seasoned rice vinegar,",
+	)
+	recipe5.ID = 5
+	recipe5.Yield = 4
+
 	//call to printRecipe function below
 	printRecipe(recipe1)
 	totalTime(recipe1)
@@ -152,6 +168,60 @@ func main() {
 	totalTime(recipe2)
 	printRecipe(recipe3)
 	totalTime(recipe3)
+	printRecipe(recipe4)
+	totalTime(recipe4)
+	printRecipe(recipe5)
+	totalTime(recipe5)
+
+	//logic for Mondays Recipe
+	if monday == 0 {
+		fmt.Println(0)
+		printRecipeOfTheDay(recipe1)
+	} else if monday == 1 {
+		fmt.Println(1)
+		printRecipeOfTheDay(recipe2)
+	} else if monday == 2 {
+		fmt.Println(2)
+		printRecipeOfTheDay(recipe3)
+	} else if monday == 3 {
+		fmt.Println(3)
+		printRecipeOfTheDay(recipe4)
+	} else if monday == 4 {
+		fmt.Println(4)
+		printRecipeOfTheDay(recipe5)
+	}
+
+	//logic for Tuesdays Recipe
+	if tuesday == 0 {
+		fmt.Println(0)
+		printRecipeOfTheDay(recipe1)
+	} else if tuesday == 1 {
+		fmt.Println(1)
+		printRecipeOfTheDay(recipe2)
+	} else if tuesday == 2 {
+		fmt.Println(2)
+		printRecipeOfTheDay(recipe3)
+	} else if tuesday == 3 {
+		fmt.Println(3)
+		printRecipeOfTheDay(recipe4)
+	} else if tuesday == 4 {
+		fmt.Println(4)
+		printRecipeOfTheDay(recipe5)
+	}
+}
+
+//function to print Recipe
+func printRecipe(recipe Recipe) {
+	fmt.Printf("Recipe Name : %s\n", recipe.name)
+	fmt.Printf("Prep Time : %d\n", recipe.prepTime)
+	fmt.Printf("Cook Time : %d\n", recipe.cookTime)
+	fmt.Printf("Ingredients : %s\n", recipe.Ingredients)
+	fmt.Printf("Recipe ID : %d\n", recipe.ID)
+}
+
+//Returns total time by addings cookTime and prepTime
+func totalTime(recipe Recipe) {
+	fmt.Printf("The total time for this recipe is %d\n", recipe.cookTime+recipe.prepTime)
 }
 
 //function to print the winner for recipe of the day to use
