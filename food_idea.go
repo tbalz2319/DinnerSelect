@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"os"
 	"time"
 )
 
-//Struct for Recipe below
+//Recipe type
 type Recipe struct { //Struct for recipe information
 	name        string
 	prepTime    int
@@ -208,6 +209,72 @@ func main() {
 		fmt.Println(4)
 		printRecipeOfTheDay(recipe5)
 	}
+
+	if wednesday == 0 {
+		fmt.Println(0)
+		printRecipeOfTheDay(recipe1)
+	} else if wednesday == 1 {
+		fmt.Println(1)
+		printRecipeOfTheDay(recipe2)
+	} else if wednesday == 2 {
+		fmt.Println(2)
+		printRecipeOfTheDay(recipe3)
+	} else if wednesday == 3 {
+		fmt.Println(3)
+		printRecipeOfTheDay(recipe4)
+	} else if wednesday == 4 {
+		fmt.Println(4)
+		printRecipeOfTheDay(recipe5)
+	}
+
+	if thursday == 0 {
+		fmt.Println(0)
+		printRecipeOfTheDay(recipe1)
+	} else if thursday == 1 {
+		fmt.Println(1)
+		printRecipeOfTheDay(recipe2)
+	} else if thursday == 2 {
+		fmt.Println(2)
+		printRecipeOfTheDay(recipe3)
+	} else if thursday == 3 {
+		fmt.Println(3)
+		printRecipeOfTheDay(recipe4)
+	} else if thursday == 4 {
+		fmt.Println(4)
+		printRecipeOfTheDay(recipe5)
+	}
+
+	if friday == 0 {
+		fmt.Println(0)
+		printRecipeOfTheDay(recipe1)
+	} else if friday == 1 {
+		fmt.Println(1)
+		printRecipeOfTheDay(recipe2)
+	} else if friday == 2 {
+		fmt.Println(2)
+		printRecipeOfTheDay(recipe3)
+	} else if friday == 3 {
+		fmt.Println(3)
+		printRecipeOfTheDay(recipe4)
+	} else if friday == 4 {
+		fmt.Println(4)
+		printRecipeOfTheDay(recipe5)
+	}
+
+	//file output testing for persistence
+
+	file, fileErr := os.Create("file")
+	if fileErr != nil {
+		fmt.Println(fileErr)
+		return
+	}
+	//fmt.Fprintf(file, "%v\n", i)
+	//The above line was a test to file to a file and is not needed
+	fmt.Fprintf(file, "%d\n", monday)
+	fmt.Fprintf(file, "%d\n", tuesday)
+	fmt.Fprintf(file, "%d\n", wednesday)
+	fmt.Fprintf(file, "%d\n", thursday)
+	fmt.Fprintf(file, "%d\n", friday)
 }
 
 //function to print Recipe
