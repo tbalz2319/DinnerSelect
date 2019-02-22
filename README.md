@@ -6,4 +6,6 @@
  
  In order to execute program type the following at the cli:
  
+ 1. ```go get 
+ 
  ```go run food_idea.go```
