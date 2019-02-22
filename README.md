@@ -3,4 +3,4 @@
 
 ## Dinner Selection Program
 
-### This Program lists recipes to try and chooses a random recipe everyday for either dinner or lunch to prepare along with ingredients
+#### This Program lists recipes to try and chooses a random recipe everyday for either dinner or lunch to prepare along with ingredients
