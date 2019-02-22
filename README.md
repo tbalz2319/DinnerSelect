@@ -6,6 +6,6 @@
  
  In order to execute program type the following at the cli:
  
- 1. ```go get 
+ 1. ```go get https://github.com/tbalz2319/DinnerSelect.git```
  
- ```go run food_idea.go```
+ 2.  ```go run food_idea.go```
