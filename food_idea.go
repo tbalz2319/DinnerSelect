@@ -568,9 +568,7 @@ func main() {
 		fmt.Fprintf(file, "%d\n", friday)
 
 	}
-
 	//file output testing for persistence
-
 }
 
 //function to print Recipe
