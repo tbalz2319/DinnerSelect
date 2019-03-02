@@ -20,17 +20,8 @@ type Recipe struct { //Struct for recipe information
 
 //main method
 func main() {
-	//5 variables below for 5 recipes for Monday-Friday
-	var recipe1 Recipe //Declare recipe1 of Type Recipe
-	var recipe2 Recipe
-	var recipe3 Recipe
-	var recipe4 Recipe
-	var recipe5 Recipe
-	var recipe6 Recipe
-	var recipe7 Recipe
-	var recipe8 Recipe
-	var recipe9 Recipe
-	var recipe10 Recipe
+	//10 variables below for 5 recipes for Monday-Friday week 1 and 5 for week 2
+	var recipe1, recipe2, recipe3, recipe4, recipe5, recipe6, recipe7, recipe8, recipe9, recipe10 Recipe //Declare recipe1 of Type Recipe
 
 	//Test of reading file and outputting array
 	file, err := os.Open("file")
