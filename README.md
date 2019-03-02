@@ -3,6 +3,7 @@
 ![os](https://img.shields.io/badge/OS-Linux,%20macOS-yellow.svg)
 ![dinnerselectver](https://img.shields.io/badge/version-1.0.0-red.svg)
 [![Twitter](https://img.shields.io/badge/twitter-@xtbalz-blue.svg)](https://twitter.com/xtbalz)
+[![Build Status](https://travis-ci.com/tbalz2319/DinnerSelect.svg?branch=master)](https://travis-ci.com/tbalz2319/DinnerSelect)
 
 ## Description
 
