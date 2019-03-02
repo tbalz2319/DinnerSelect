@@ -19,6 +19,10 @@ a friend, spouse, family member, etc
 
 - In order to execute program type the following at the cli:
 
- 1: ```go get https://github.com/tbalz2319/DinnerSelect.git```
+### Donwnload
 
- 2:  ```go run dinner.go```
+```go get https://github.com/tbalz2319/DinnerSelect.git```
+
+### Run
+
+ ```go run dinner.go```
