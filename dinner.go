@@ -60,6 +60,7 @@ func main() {
 	fmt.Println(nums)
 	fmt.Printf("This is the nums line: %d\n", nums)
 	fmt.Printf("This is the first number of nums array: %d\n", nums[0])
+	fmt.Printf("This is the second number of the nums array: %d]n", nums[1])
 	//Test function for printing variables for week 2
 	//using the variable k because r has been taken in
 	//another part of the program
