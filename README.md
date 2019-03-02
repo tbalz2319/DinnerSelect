@@ -20,4 +20,4 @@ a friend, spouse, family member, etc
 
  1: ```go get https://github.com/tbalz2319/DinnerSelect.git```
 
- 2:  ```go run food_idea.go```
+ 2:  ```go run dinner.go```
