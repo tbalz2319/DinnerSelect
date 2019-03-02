@@ -1,11 +1,13 @@
-## Dinner Selection Program
+# Dinner Selection Program
 
- -This Program lists recipes to try and chooses a random recipe everyday for either dinner or lunch to prepare along with ingredients
+## Description
+
+-This Program lists recipes to try and chooses a random recipe everyday for either dinner or lunch to prepare along with ingredients
  
  -It was my first try at Golang to get familiar with the language, hope it helps others
  
  In order to execute program type the following at the cli:
  
- 1. ```go get https://github.com/tbalz2319/DinnerSelect.git```
+ 1: ```go get https://github.com/tbalz2319/DinnerSelect.git```
  
- 2.  ```go run food_idea.go```
+ 2:  ```go run food_idea.go```
