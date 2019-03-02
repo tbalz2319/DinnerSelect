@@ -4,6 +4,7 @@
 ![dinnerselectver](https://img.shields.io/badge/version-1.0.0-red.svg)
 [![Twitter](https://img.shields.io/badge/twitter-@xtbalz-blue.svg)](https://twitter.com/xtbalz)
 [![Build Status](https://travis-ci.com/tbalz2319/DinnerSelect.svg?branch=master)](https://travis-ci.com/tbalz2319/DinnerSelect)
+[![CodeFactor](https://www.codefactor.io/repository/github/tbalz2319/dinnerselect/badge)](https://www.codefactor.io/repository/github/tbalz2319/dinnerselect)
 
 ## Description
 
